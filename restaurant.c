@@ -2,10 +2,10 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+
 struct pedido
 {
     char namePed[200];
-    char CPF[200];
     char numPed[200];
     char qtdPed[200];
     char valorped[200];
@@ -14,10 +14,8 @@ struct pedido
 
 struct cadastro
 {
-    char CPF[200];
-    char telefone[200];
+  
     char nome[200];
-    char endereco[200];
     char data[200];
     int vazio,cod;
     struct pedido clientePed;
