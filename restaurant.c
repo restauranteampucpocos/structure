@@ -268,7 +268,7 @@ void consultaCod (void) // CONSULTAR 1 CADASTRADO QUALQUER VIA CÓDIGO DADO POR 
             if (log[cont].vazio==1)
             {
                
-                printf("\nCodigo: %d \nNome: %s\nCPF: %s\nEndereco: %s\nTelefone: %s\n\n", log[cont].cod,log[cont].nome,log[cont].CPF,log[cont].endereco,log[cont].telefone);
+                printf("\nCodigo: %d \nNome: \n\n", log[cont].cod,log[cont].nome,log[cont]);
                
 
                 system ("pause");
@@ -305,7 +305,7 @@ void excluirCliente(void)  // EXCLUI CLIENTE
 
             if (log[cont].vazio == 1 )
             {
-                printf("\nCodigo: %d \nNome: %s\nCPF: %s\nEndereco: %s\nTelefone: %s\n\n", log[cont].cod,log[cont].nome,log[cont].CPF,log[cont].endereco,log[cont].telefone);
+                printf("\nCodigo: %d \nNome: \n\n", log[cont].cod,log[cont].nome,log[cont]);
                 getchar();
                 printf("\nDeseja realmente exlucir? s/n: ");
                 scanf("%s",&resp);
