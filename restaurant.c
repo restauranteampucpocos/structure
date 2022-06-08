@@ -164,8 +164,8 @@ void cadastroP(int cod, int pos){ //Cadastro das pessoas
         printf("\nDigite seu Telefone: ");
         gets(log[pos].telefone);
         log[pos].vazio = 1;
-        //printf("\nDigite enter para efetuar novo cadastro ou qualquer outra tecla para volar ao menu principal");
-        //scanf("%d", &opt);
+        printf("\nDigite enter para efetuar novo cadastro ou qualquer outra tecla para volar ao menu principal");
+        scanf("%d", &opt);
         opt ==1;
         getchar();  
     }while(opt==1);
