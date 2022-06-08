@@ -30,15 +30,14 @@ void list();
 void cadastroPedido();
 void consultaCod (void);
 void excluirCliente (void);
-int main(void){ //INICIO DO MAIN
 
+int main(void){ //INICIO DO MAIN
+    printf("*******RESTAURANTE DO BANANIL*******");
     int i,Opcao,OpcaoCliente,posicao,retorno;
     int codaux;
     do
     {
         printf("1 - Cadastrar Novo Cliente\n");
-        printf("2 - Cliente\n");
-        printf("3 - Alterar Cliente\n");
         printf("4 - Excluir Cliente\n");
         printf("5 - Cadastrar Pedido\n");
         printf("6 - Alterar Pedido\n");
@@ -76,36 +75,10 @@ int main(void){ //INICIO DO MAIN
                 break;
  
         }
-        else if (Opcao == 2)
-        {
-           printf("\033[H\033[J");;
-            do{
-            printf("Voce selecionou a opcao 2 - Clientes\n\n");
-            printf("1 - Pesquisar cliente por codigo\n");
-            printf("2 - Listar todos os clientes\n");
-            printf("3 - Voltar ao menu principal\n");
-            printf("Selecione uma opcao por favor: ");
-            scanf("%d", &OpcaoCliente);
-            getchar();
-                 if(OpcaoCliente == 1){
-                    consultaCod();
-                }
-                else if(OpcaoCliente == 2){
-                    list();
-                }
-                else if(OpcaoCliente == 3){
-                    printf("Voce selecionou voltar ao menu principal, pressione ENTER para continuar");
-                    getchar();
-                   printf("\033[H\033[J");
-                }
-                else
-                    printf("Opcao Invalida\n\n");
+     
     }while(OpcaoCliente =!3 || OpcaoCliente > 3 || OpcaoCliente < 0 || OpcaoCliente == 0);
         }
-        else if (Opcao == 3)
-        {
-            printf("Voce selecionou a opcao 3 - Alterar Cliente\n");
-        }
+        
         else if (Opcao == 4)
         {
             printf("Voce selecionou a opcao 4 - Excluir Cliente\n");
@@ -155,12 +128,6 @@ void cadastroP(int cod, int pos){ //Cadastro das pessoas
     log[pos].cod = cod;
         printf("\nDigite seu nome: ");
         gets(log[pos].nome);
-       //printf("\nDigite seu CPF: ");     *********des
-       //gets(log[pos].CPF);               *********ne
-       //printf("\nDigite seu Endereco: ");*********ce
-       //gets(log[pos].endereco);          *********ssá
-       //printf("\nDigite seu Telefone: ");*********rio
-       //gets(log[pos].telefone);          *********.
         log[pos].vazio = 1;
         printf("\nDigite enter para efetuar novo cadastro ou qualquer outra tecla para voltar ao menu principal");
         scanf("%d", &opt);
@@ -207,6 +174,7 @@ void cadastroPedido(){ //Cadastro dos pedidos
     printf("\033[H\033[J");;    
     int i;
     int Option;
+    int mesa;
     int OpcaoPedido;
     char nomeCad[200];
     printf("\nDigite seu nome como esta no cadastro: ");
@@ -254,8 +222,7 @@ fila->comeco = 0;
 fila->fim = -1;
 }
 
-void inserir(struct filaElementos *fila, int namePed)
-{
+void inserir(struct filaElementos *fila, int d)
     if(fila->fim == m - 1)
     printf("Fila está lotada, aguarde... \n");
 else
