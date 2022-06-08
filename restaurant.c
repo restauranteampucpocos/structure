@@ -2,10 +2,10 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+
 struct pedido
 {
     char namePed[200];
-    char CPF[200];
     char numPed[200];
     char qtdPed[200];
     char valorped[200];
@@ -14,10 +14,8 @@ struct pedido
 
 struct cadastro
 {
-    char CPF[200];
-    char telefone[200];
+  
     char nome[200];
-    char endereco[200];
     char data[200];
     int vazio,cod;
     struct pedido clientePed;
@@ -142,7 +140,7 @@ void list(){ // Lista os usuarios cadastrados.
     int i,j;  
     for(i=0;i<200;i++){
         if(log[i].cod!=NULL){
-            printf("\nCodigo: %d \nNome: %s\nCPF: %s\nEndereco: %s\nTelefone: %s\n\n", log[i].cod,log[i].nome,log[i].CPF,log[i].endereco,log[i].telefone);
+            printf("\nCodigo: %d \nNome: \n\n", log[i].cod,log[i].nome,log[i]);
     }
 }
     printf("Pressione enter para volta ao menu principal");
@@ -157,12 +155,12 @@ void cadastroP(int cod, int pos){ //Cadastro das pessoas
     log[pos].cod = cod;
         printf("\nDigite seu nome: ");
         gets(log[pos].nome);
-        printf("\nDigite seu CPF: ");
-        gets(log[pos].CPF);
-        printf("\nDigite seu Endereco: ");
-        gets(log[pos].endereco);
-        printf("\nDigite seu Telefone: ");
-        gets(log[pos].telefone);
+       //printf("\nDigite seu CPF: ");     *********des
+       //gets(log[pos].CPF);               *********ne
+       //printf("\nDigite seu Endereco: ");*********ce
+       //gets(log[pos].endereco);          *********ssá
+       //printf("\nDigite seu Telefone: ");*********rio
+       //gets(log[pos].telefone);          *********.
         log[pos].vazio = 1;
         printf("\nDigite enter para efetuar novo cadastro ou qualquer outra tecla para volar ao menu principal");
         scanf("%d", &opt);
@@ -268,7 +266,7 @@ void consultaCod (void) // CONSULTAR 1 CADASTRADO QUALQUER VIA CÓDIGO DADO POR 
             if (log[cont].vazio==1)
             {
                
-                printf("\nCodigo: %d \nNome: %s\nCPF: %s\nEndereco: %s\nTelefone: %s\n\n", log[cont].cod,log[cont].nome,log[cont].CPF,log[cont].endereco,log[cont].telefone);
+                printf("\nCodigo: %d \nNome: \n\n", log[cont].cod,log[cont].nome,log[cont]);
                
 
                 system ("pause");
@@ -305,7 +303,7 @@ void excluirCliente(void)  // EXCLUI CLIENTE
 
             if (log[cont].vazio == 1 )
             {
-                printf("\nCodigo: %d \nNome: %s\nCPF: %s\nEndereco: %s\nTelefone: %s\n\n", log[cont].cod,log[cont].nome,log[cont].CPF,log[cont].endereco,log[cont].telefone);
+                printf("\nCodigo: %d \nNome: \n\n", log[cont].cod,log[cont].nome,log[cont]);
                 getchar();
                 printf("\nDeseja realmente exlucir? s/n: ");
                 scanf("%s",&resp);
